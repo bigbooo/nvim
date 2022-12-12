@@ -154,6 +154,11 @@ _G.packer_plugins = {
     path = "/Users/xushaokui/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["project.nvim"] = {
+    loaded = true,
+    path = "/Users/xushaokui/.local/share/nvim/site/pack/packer/start/project.nvim",
+    url = "https://github.com/ahmedkhalf/project.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/xushaokui/.local/share/nvim/site/pack/packer/start/telescope.nvim",

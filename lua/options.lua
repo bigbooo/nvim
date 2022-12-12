@@ -11,5 +11,5 @@ vim.opt.incsearch = true                -- 边输入边搜索
 vim.opt.softtabstop = 4                 
 vim.opt.shiftwidth = 4                  -- 自动缩进时的缩进长度
 vim.opt.expandtab = true                -- 将 Tab 转换为对应数量的空格
-vim.opt.smartindent = true
-vim.opt.cindent = true
+vim.opt.smartindent = true              -- 自动缩进
+vim.opt.cindent = true                  -- 针对C语言的自动缩进
