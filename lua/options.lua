@@ -1,0 +1,15 @@
+vim.opt.number = true					-- 显示行号
+vim.opt.relativenumber = true			-- 相对行号
+vim.opt.scrolloff = 8					-- 垂直显示余量
+vim.opt.sidescrolloff = 8				-- 水平显示余量
+vim.opt.tabstop = 4						-- tab 键空格数
+vim.opt.fileencoding = "utf-8"			-- 文件默认编码
+vim.opt.clipboard = "unnamedplus"		-- 允许 vim 使用系统剪贴板
+vim.opt.cursorline = true				-- 高亮光标所在行
+vim.opt.termguicolors = true			-- 真彩色
+vim.opt.incsearch = true                -- 边输入边搜索
+vim.opt.softtabstop = 4                 
+vim.opt.shiftwidth = 4                  -- 自动缩进时的缩进长度
+vim.opt.expandtab = true                -- 将 Tab 转换为对应数量的空格
+vim.opt.smartindent = true
+vim.opt.cindent = true

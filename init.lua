@@ -1,0 +1,7 @@
+require "options"
+require "plugins"
+require "colors"
+require "nvimtree"
+require "dashboard-nvim"
+require "cmp-nvim"
+require "telescope-nvim"
