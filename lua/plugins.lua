@@ -43,7 +43,8 @@ return packer.startup(function(use)
   use { "wbthomason/packer.nvim"} -- Have packer manage itself
 
   -- 主题
-  use "lunarvim/colorschemes"
+  -- use "lunarvim/colorschemes"
+  use "lunarvim/darkplus.nvim"
   -- NvimTree
   use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua"
@@ -70,6 +71,11 @@ return packer.startup(function(use)
   use "ahmedkhalf/project.nvim"
   -- TreeSitter
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+  -- lualine
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
   
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
