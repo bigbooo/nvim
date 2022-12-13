@@ -58,6 +58,9 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-cmdline"
   use "saadparwaiz1/cmp_luasnip"
+  use "onsails/lspkind-nvim"
+  use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
   -- snippets
   use "L3MON4D3/LuaSnip"
   use "rafamadriz/friendly-snippets"
@@ -71,12 +74,19 @@ return packer.startup(function(use)
   use "ahmedkhalf/project.nvim"
   -- TreeSitter
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
-  -- lualine
+  -- Lualine
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-  
+  -- Bufferline
+  use {'akinsho/bufferline.nvim', tag = "v3.*",
+    requires = 'nvim-tree/nvim-web-devicons'
+  }
+  -- Symbols-outline
+  use 'simrat39/symbols-outline.nvim'
+  use {"akinsho/toggleterm.nvim", tag = '*' }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

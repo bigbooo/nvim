@@ -1,5 +1,8 @@
-vim.g.completeopt = "menu,menuone,noselect,noinsert"
-local cmp = require 'cmp'
+vim.g.completeopt = "menuone,noselect,noinsert"
+local status, cmp = pcall(require, "cmp")
+if (not status) then return end
+
+local lspkind = require 'lspkind'
 
 cmp.setup({
   snippet = {
@@ -10,10 +13,6 @@ cmp.setup({
       -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
       -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
     end,
-  },
-  window = {
-    -- completion = cmp.config.window.bordered(),
-    -- documentation = cmp.config.window.bordered(),
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
@@ -31,7 +30,11 @@ cmp.setup({
   }, {
     { name = 'buffer' },
 	{ name = 'path' },
-  })
+  }),
+
+  formatting = {
+    format = lspkind.cmp_format({ with_text = false, maxwidth = 50 })
+  }
 })
 
 -- Set configuration for specific filetype.

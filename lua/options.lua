@@ -1,3 +1,4 @@
+vim.g.mapleader = ';'
 vim.opt.number = true					-- 显示行号
 vim.opt.relativenumber = true			-- 相对行号
 vim.opt.scrolloff = 8					-- 垂直显示余量
