@@ -9,7 +9,7 @@ so.setup {
   auto_preview = false,
   position = 'left',
   relative_width = true,
-  width = 15,
+  width = 10,
   auto_close = false,
   show_numbers = false,
   show_relative_numbers = false,

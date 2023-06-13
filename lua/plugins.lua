@@ -49,7 +49,7 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua"
   -- DashBoard
-  use "glepnir/dashboard-nvim"
+  use {'glepnir/dashboard-nvim', commit = "e517188dab55493fb9034b4d4f1a508ccacfcd45"}
   -- 自动补全
   use "neovim/nvim-lspconfig"
   use "hrsh7th/cmp-nvim-lsp"
@@ -73,7 +73,7 @@ return packer.startup(function(use)
   }
   use "ahmedkhalf/project.nvim"
   -- TreeSitter
-  use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+  use { "nvim-treesitter/nvim-treesitter", commit = "8c71c6c5edfa447aaa867858e2e913340ea964b7", run = ":TSUpdate" }
   -- Lualine
   use {
     'nvim-lualine/lualine.nvim',
@@ -86,7 +86,11 @@ return packer.startup(function(use)
   -- Symbols-outline
   use 'simrat39/symbols-outline.nvim'
   use {"akinsho/toggleterm.nvim", tag = '*' }
+  use 'hesselbom/vim-hsftp'
 
+  use {
+	"windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end
+  }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

@@ -42,3 +42,6 @@ keymap.set('n', '<leader>r', 'yiw:Telescope live_grep<CR>')
 --DashBoard
 keymap.set('n', 'fd', '<C-w>c:Dashboard<Return>')
 keymap.set('n', '<S-f>d', ':Dashboard<Return>')
+
+--HSync
+keymap.set('n', '<leader>w', ':w<CR>:Hupload<CR>')
